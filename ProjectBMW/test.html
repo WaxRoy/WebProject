@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Test</title>
+        <link rel="stylesheet" href="./styles.css">
+
+        <style>
+            label {
+            display: block;
+            margin-bottom: 8px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+            .button2{
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            }
+
+            .button2:hover {
+            background-color: #2d723e;
+            }
+
+            #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+
+            #sty{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                max-width: 600px;
+                margin: 20px auto;
+                background-color: #f4f4f4;
+                color: #333;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
+    </head>
+
+    <body id="backGround">
+        <header> <!--bu etiket sayfasın başlık menü gibi kısımlarını oluştururken kullanılır-->
+
+            <h1>BMW</h1>
+            
+            <div class="logo-container"> <!--bir belge içinde içerikleri düzenlemek ve gruplamak amacıyla kullanılır.-->
+                <a href="main.html">
+                    <img src="./Img/BMW.svg.png" alt="BMW Logo" class="logo">
+                </a>
+            </div>
+
+            <nav> <!--Bu element, sayfanın gezinme bölümünü sıralı olarak belirtmek için kullanılırsq-->
+                <ul>
+                    <li><a href="./models.html">Modeller</a></li>
+                    <li><a href="./engines.html">Motorlar</a></li>
+                    <li><a href="./history.html">BMW Tarihi</a></li>
+                    <li><a href="./experience.html">Sürücü Deneyimleri</a></li>
+                    <li><a href="./test.html">Test</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <header id="sty">
+            <div class="question">
+                <p>Aşağıdakilerden hangisi E92 M3 modeline aittir?</p>
+                <div class="options">
+                    <label><input type="radio" name="e92Model" value="a">a) <img src="./Img/test/F80M3.jpg" alt="Seçenek A"></label>
+                    <label><input type="radio" name="e92Model" value="b">b) <img src="./Img/test/e92M3.jpg" alt="Seçenek B"></label>
+                    <label><input type="radio" name="e92Model" value="c">c) <img src="./Img/test/g80m3.jpg" alt="Seçenek C"></label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <p>Duyduğunuz ses aşağıdakilerden hangi motora aittir</p>
+                <button class="button" onclick="playSound()">Motor Sesini Dinlemek İçin Buraya Tıklayınız</button>
+                <div class="options">
+                    <label><input type="radio" name="engineSound" value="a"> a) S65 </label>
+                    <label><input type="radio" name="engineSound" value="b"> b) S54 </label>
+                    <label><input type="radio" name="engineSound" value="c"> c) S85 </label>
+                </div>
+            </div>
+    
+            <button class="button2" onclick="submitTest()">Testi Gönder</button>
+
+            <div id="result"></div> 
+        </header>
+        
+        
+
+        <script>
+            function submitTest() {
+                var correctAnswers = 0;
+
+                var question1Answer = document.querySelector('input[name="e92Model"]:checked');
+                if (question1Answer && question1Answer.value === 'b') {
+                    correctAnswers++;
+                }
+    
+                var question2Answer = document.querySelector('input[name="engineSound"]:checked');
+                if (question2Answer && question2Answer.value === 'a') {
+                    correctAnswers++;
+                }
+    
+                var resultElement = document.getElementById('result');
+                resultElement.innerHTML = "Doğru Cevap Sayısı: " + correctAnswers;
+            }
+
+            function playSound(){
+                var audio = new Audio('./Sound/test/s65m3e92.mp3');
+                audio.play();
+            }
+        </script>
+
+
+
+
+        <header>
+            <nav>
+                <p class="margin">Email göndermek için <a href="mailto:info@bmw.com">buraya tıklayın</a>.</p><br />
+                <p class="margin">Adres : 2000.Cadde BMW Store PK:06500 Çankaya / Ankara </p><br />
+                <p class="margin">Telefon : +90 555 444 33 22</p><br />
+                <a href="test-en.html">English</a>
+                <a href="test.html" class="active">Türkçe</a>
+            </nav>
+
+        </header>
+
+    </body>
+
+</html>

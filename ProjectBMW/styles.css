@@ -1,0 +1,119 @@
+#backGround{
+    background-color: #F3F8FF;
+}
+
+.title{
+    background-color: #4F6F52;
+    color: #FAF8F1;
+    padding: 10px;
+}
+
+.paragraph{
+    padding: 10px;
+}
+
+.margin{
+    margin-bottom: 1px;
+}
+.image{
+    width: 300px;
+    height: auto;
+}
+
+.image-container{
+    margin-left: 150px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 5%; /* Logo ile metin arasındaki boşluk */
+    max-width: 100%; /* Logo'nun en fazla %100 genişlikte olmasını sağlar */
+    height: auto; /* Orantılı olarak boyutlandırma yapar */
+}
+
+.logo-container {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em; /*dört tarafı (üst, sağ, alt ve sol) farklı uzaklıklarda belirtmenize olanak tanır*/
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /*yatay yazıyor*/
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none; /*alttaki çizgiyi yok ediyor*/
+    color: #ffffff;
+}
+
+
+
+nav a:hover{ /*linklerin üzerine gelince renk değiştirir*/
+    text-decoration: none;
+    color: #857f7f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#size{
+    font-size: 30px;
+    
+}
+
+.button {
+    background-color: #85abc4;
+    color: #fff;
+    border: none; /*Butonun kenarlığını kaldırır.*/
+    padding: 10px 20px; /*Buton içeriğinin içerideki boşlukları belirler. Burada, yukarıdan ve alttan 10 piksel, sağdan ve soldan 20 piksel iç boşluk bırakılır.*/
+    font-size: 16px;
+    cursor: pointer; /*Fare imlecinin buton üzerine geldiğinde bir el şeklini almasını sağlar, bu da bir tıklanabilir öğe olduğunu gösterir.*/
+    border-radius: 10px; /*Butonun köşelerini yuvarlar. Burada 10 piksel bir yuvarlak köşe uygulanmıştır.*/
+    transition: transform 0.3s ease, background-color 0.3s ease; /*Buton üzerine gelindiğinde ve stil değişiklikleri olduğunda animasyonlu geçiş efektini tanımlar. transform ve background-color özelliklerindeki değişiklikler 0.3 saniyede (0.3s) gerçekleşecek ve geçiş efekti "ease" fonksiyonu ile yavaşça başlayıp yavaşça sona erecektir.*/
+    margin-left: 10px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1); /* Butonun üzerine gelindiğinde büyüme efekti uygular. scale(1.1), butonun normal boyutunun %10 daha büyük olmasını sağlar. Bu, butonun biraz büyümesini ve görsel olarak vurgulanmasını sağlar.*/
+    margin-left: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+    font-weight: bold;
+}
+
+
+     
+
+
+

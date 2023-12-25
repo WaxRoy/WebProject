@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Motorlar</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body id="backGround">
+        <header>
+
+            <h1>BMW</h1>
+            
+            <div class="logo-container">
+                <a href="main.html">
+                    <img src="./Img/BMW.svg.png" alt="BMW Logo" class="logo">
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./models.html">Modeller</a></li>
+                    <li><a href="./engines.html">Motorlar</a></li>
+                    <li><a href="./history.html">BMW Tarihi</a></li>
+                    <li><a href="./experience.html">Sürücü Deneyimleri</a></li>
+                    <li><a href="./test.html">Test</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h3 class="title">BMW S50 Motoru:</h3>
+        <p class="paragraph">
+            <ul>
+                <li>S50 motoru, BMW'nin performans odaklı M3 modellerinde kullanılan altı silindirli bir motordur.</li>
+                <li> Örnek Model: BMW E36 M3</li>
+                <li> Örnek Motor Kodu: S50B32</li>
+            </ul>
+          
+        </p>
+
+        <div class="paragraph">
+            <img src="./Img/Engine/s50b32.jfif" class="image">
+        </div>
+
+        <button class="button" onclick="playSound()">Motor Sesini Dinlemek İçin Buraya Tıklayınız</button>
+
+        <script>
+            function playSound() {
+            var audio = new Audio('./Sound/E36_M3_S50.mp3');
+            audio.play();
+            }
+        </script>
+
+        <h3 class="title">BMW S85 Motoru:</h3>
+        <p class="paragraph">
+            <ul>
+                <li>S85 motoru, yüksek performanslı, V10 benzinli bir motordur.</li>
+                <li>Örnek Model: BMW E60 M5, E63 M6</li>
+                <li>Örnek Motor Kodu: S85B50</li>
+            </ul>
+        </p>
+
+        <div class="paragraph">
+            <img src="./Img/Engine/S85.jpg" class="image">
+        </div>
+
+        <button class="button" onclick="playSound2()">Motor Sesini Dinlemek İçin Buraya Tıklayınız</button>
+
+        <script>
+            function playSound2() {
+            var audio = new Audio('./Sound/S85.mp3');
+            audio.play();
+            }
+        </script>
+        
+
+
+
+        <header>
+            <nav>
+                <p class="margin">Email göndermek için <a href="mailto:info@bmw.com">buraya tıklayın</a>.</p><br />
+                <p class="margin">Adres : 2000.Cadde BMW Store PK:06500 Çankaya / Ankara </p><br />
+                <p class="margin">Telefon : +90 555 444 33 22</p><br />
+                <a href="engines-en.html">English</a>
+                <a href="engines.html" class="active">Türkçe</a>
+            </nav>
+
+        </header>
+    </body>
+</html>
+

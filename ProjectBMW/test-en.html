@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Test</title>
+        <link rel="stylesheet" href="./styles.css">
+
+        <style>
+            label {
+            display: block;
+            margin-bottom: 8px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+            .button2{
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            }
+
+            .button2:hover {
+            background-color: #2d723e;
+            }
+
+            #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+
+            #sty{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                max-width: 600px;
+                margin: 20px auto;
+                background-color: #f4f4f4;
+                color: #333;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
+    </head>
+
+    <body id="backGround">
+        <header>
+
+            <h1>BMW</h1>
+            
+            <div class="logo-container">
+                <a href="main-en.html">
+                    <img src="./Img/BMW.svg.png" alt="BMW Logo" class="logo">
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./models-en.html">Models</a></li>
+                    <li><a href="./engines-en.html">Engines</a></li>
+                    <li><a href="./history-en.html">History of BMW</a></li>
+                    <li><a href="./experience-en.html">Driver Experiences</a></li>
+                    <li><a href="./test-en.html">Test</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <header id="sty">
+            <div class="question">
+                <p>Which of the following belongs to the E92 M3 model?</p>
+                <div class="options">
+                    <label><input type="radio" name="e92Model" value="a">a) <img src="./Img/test/F80M3.jpg" alt="Seçenek A"></label>
+                    <label><input type="radio" name="e92Model" value="b">b) <img src="./Img/test/e92M3.jpg" alt="Seçenek B"></label>
+                    <label><input type="radio" name="e92Model" value="c">c) <img src="./Img/test/g80m3.jpg" alt="Seçenek C"></label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <p>The sound you hear belongs to which engine of the following?</p>
+                <button class="button" onclick="playSound()">Click Here to Listen to Engine Sound</button>
+                <div class="options">
+                    <label><input type="radio" name="engineSound" value="a"> a) S65 </label>
+                    <label><input type="radio" name="engineSound" value="b"> b) S54 </label>
+                    <label><input type="radio" name="engineSound" value="c"> c) S85 </label>
+                </div>
+            </div>
+    
+            <button class="button2" onclick="submitTest()">Submit Test</button>
+
+            <div id="result"></div> 
+        </header>
+        
+        
+
+        <script>
+            function submitTest() {
+                var correctAnswers = 0;
+
+                var question1Answer = document.querySelector('input[name="e92Model"]:checked');
+                if (question1Answer && question1Answer.value === 'b') {
+                    correctAnswers++;
+                }
+    
+                var question2Answer = document.querySelector('input[name="engineSound"]:checked');
+                if (question2Answer && question2Answer.value === 'a') {
+                    correctAnswers++;
+                }
+    
+                var resultElement = document.getElementById('result');
+                resultElement.innerHTML = "Number of Correct Answers: " + correctAnswers;
+            }
+
+            function playSound(){
+                var audio = new Audio('./Sound/test/s65m3e92.mp3');
+                audio.play();
+            }
+        </script>
+
+
+
+
+        <header>
+            <nav>
+                <p class="margin">To send an email <a href="mailto:info@bmw.com">Click here</a>.</p><br />
+                <p class="margin">Address : 2000.Strert BMW Store Post Code:06500 Çankaya / Ankara </p><br />
+                <p class="margin">Telephone : +90 555 444 33 22</p><br />
+                <a href="test-en.html" class="active">English</a>
+                <a href="test.html">Türkçe</a>
+            </nav>
+
+        </header>
+
+    </body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Motorlar</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body id="backGround">
+        <header>
+
+            <h1>BMW</h1>
+            
+            <div class="logo-container">
+                <a href="main-en.html">
+                    <img src="./Img/BMW.svg.png" alt="BMW Logo" class="logo">
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./models-en.html">Models</a></li>
+                    <li><a href="./engines-en.html">Engines</a></li>
+                    <li><a href="./history-en.html">BMW History</a></li>
+                    <li><a href="./experience-en.html">Driver Experiences</a></li>
+                    <li><a href="./test-en.html">Test</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h3 class="title">BMW S50 Engine:</h3>
+        <p class="paragraph">
+            <ul>
+                <li>The S50 engine is a six-cylinder engine used in BMW's performance-oriented M3 models.</li>
+                <li> Example Model: BMW E36 M3</li>
+                <li> Example Engine Code: S50B32</li>
+            </ul>
+          
+        </p>
+
+        <div class="paragraph">
+            <img src="./Img/Engine/s50b32.jfif" class="image">
+        </div>
+
+        <button class="button" onclick="playSound()">Click Here to Listen to Engine Sound</button>
+
+        <script>
+            function playSound() {
+            var audio = new Audio('./Sound/E36_M3_S50.mp3');
+            audio.play();
+            }
+        </script>
+
+        <h3 class="title">BMW S85 Engine:</h3>
+        <p class="paragraph">
+            <ul>
+                <li>The S85 engine is a high-performance V10 gasoline engine.</li>
+                <li>Example Model: BMW E60 M5, E63 M6</li>
+                <li>Example Engine Code: S85B50</li>
+            </ul>
+        </p>
+
+        <div class="paragraph">
+            <img src="./Img/Engine/S85.jpg" class="image">
+        </div>
+
+        <button class="button" onclick="playSound2()">Click Here to Listen to Engine Sound</button>
+
+        <script>
+            function playSound2() {
+            var audio = new Audio('./Sound/S85.mp3');
+            audio.play();
+            }
+        </script>
+        
+
+
+
+        <header>
+            <nav>
+                <p class="margin">To send an email <a href="mailto:info@bmw.com">Click here</a>.</p><br />
+                <p class="margin">Address : 2000.Strert BMW Store Post Code:06500 Çankaya / Ankara </p><br />
+                <p class="margin">Telephone : +90 555 444 33 22</p><br />
+                <a href="engines-en.html" class="active">English</a>
+                <a href="engines.html">Türkçe</a>
+            </nav>
+
+        </header>
+    </body>
+</html>
+
